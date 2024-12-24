@@ -6,4 +6,15 @@ export default defineConfig({
   build: {
     outDir: 'dist',
   },
+  server: {
+    open: true,
+  },
+  resolve: {
+    alias: {
+      '@': '/src',
+    },
+  },
+  esbuild: {
+    jsxInject: `import React from 'react'`,
+  },
 });
